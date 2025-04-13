@@ -1,0 +1,110 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGMAAA</title>
+    <link rel="stylesheet" href="yes_style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="header_text">UNTUK BOCIL GORILLA GUEE!!! </h1>
+        <div id="quiz-container">
+        <h2>Tebak-Tebakan!</h2>
+        <p id="question">Apa rasa favorit lontong yang bisa bikin ampe overdosis?
+        </p>
+        <input type="text" id="answer" placeholder="Jawaban kamu...">
+        <button onclick="checkAnswer()">Submit</button>
+        <div id="result-container">
+            <p id="result"></p>
+            <video id="result-video" src="dikta.mp4" alt="Benar!" controls style="display: none;">
+            </video>
+            <br>
+            <div class="services">
+                <div class="service-card">
+                    <h1 id="heading" style="display: none;">Habede Lontogzz🎉</h1>
+                    <p id="result-text" style="display: none;">
+
+                        Hari ini kamu nambah umur, jadi ingat ya, jangan nambah galau, jangan nambah drama, dan yang paling penting... jangan nambah bocil! 😎
+                        <br><br>
+                        
+                        Semoga di usia yang baru ini, kamu makin keren, makin sukses, dan jangan lupa... makin sering traktir gue ya! 😜 <br> <br>
+                        
+                        Jangan cuma sibuk berdoa biar dapat jodoh ma dikta, tapi juga berdoa biar dompetmu tebal dan penuh rezeki! 💰<br> <br>
+                        
+                        Semoga segala cita-cita tercapai, tapi jangan lupa juga, jangan cuma cita-cita yang dikejar, tapi kenyataannya juga! 😅<br> <br>
+                        
+                        Happy Birthday, semoga tahun ini lebih seru daripada nonton windah tiap sore!</p>
+                </div>
+                
+            </div>
+            
+        </div> <br>
+        <div class="audio-container" id="audio-container" style="display: none;">
+            <h2>🎧 Putar Rekaman Suara</h2>
+            <audio id="audio" controls>
+                <source src="dewa.mp3" type="audio/mpeg">
+                Browser kamu tidak mendukung pemutar audio.
+            </audio>
+            <br>
+            <button id="replay-audio" style="display: none;">🔁 Putar Ulang</button>
+        </div>
+    </div>
+
+    <script>
+      function checkAnswer() {
+    const correctAnswer = "matcha";
+    const userAnswer = document.getElementById("answer").value.toLowerCase();
+    const resultText = document.getElementById("result");
+    const resultMessage = document.getElementById("result-text");
+    const resultVideo = document.getElementById("result-video");
+    const heading = document.getElementById("heading");
+    const button = document.querySelector(".Kembali-btn");
+    const audioContainer = document.getElementById("audio-container");
+
+    if (userAnswer === correctAnswer) {
+        resultText.innerHTML = "NAH INI BARU BOKEM LONTONG!! 🎉";
+        resultText.style.color = "green";
+        resultText.style.background = "white";
+        resultVideo.style.display = "block";
+        resultMessage.style.display = "block";
+        heading.style.display = "block";
+        button.style.display = "block";
+        audioContainer.style.display = "block";  // TAMPILKAN audio
+
+        const playPromise = audio.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.log("Auto play gagal:", error);
+                    });
+                }
+    } else {
+        resultText.innerHTML = "AH PAYAH MASA SALAH, GA BAKAL GUE TRAKTIR LAGI NIIH!!! ❌";
+        resultText.style.color = "red";
+        resultText.style.background = "white";
+        resultVideo.style.display = "none";
+        resultMessage.style.display = "none";
+        heading.style.display = "none";
+        button.style.display = "none";
+        audioContainer.style.display = "none";  // SEMBUNYIKAN audio
+    }
+}
+
+
+    </script>
+    
+  
+       
+        <div class="buttons">
+            <div class="buttons">
+                <button class="Kembali-btn" onclick="window.location.href='https://wa.me/62881038493181'" style="display: none;">CLICK</button>
+            </div>
+            
+        </div>
+    </div>
+
+
+</body>
+</html>
